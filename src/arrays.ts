@@ -17,7 +17,7 @@ export function bookEndList(numbers: number[]): number[] {
  * number has been tripled (multiplied by 3).
  */
 export function tripleNumbers(numbers: number[]): number[] {
-    let tripledNumbers = numbers.map((number: number): number => number * 3);
+    const tripledNumbers = numbers.map((number: number): number => number * 3);
     return tripledNumbers;
 }
 
@@ -26,7 +26,7 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
-    let integers = numbers.map((number: string): number =>
+    const integers = numbers.map((number: string): number =>
         !parseInt(number) ? 0 : parseInt(number),
     );
     return integers;
@@ -64,7 +64,8 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  * 4 letters long.
  */
 export function countShortWords(words: string[]): number {
-    return 0;
+    const shortWords = words.filter((word: string): boolean => word.length < 4);
+    return shortWords.length;
 }
 
 /**
