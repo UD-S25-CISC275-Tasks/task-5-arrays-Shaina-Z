@@ -5,11 +5,10 @@
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
-    const bookEndnumbers = numbers.filter(
-        (number: number): boolean =>
-            number === numbers[1] || number === numbers[-1],
-    );
-    return bookEndnumbers;
+    if (numbers.length === 0) {
+        return [];
+    }
+    return [numbers[0], numbers[numbers.length - 1]];
 }
 
 /**
